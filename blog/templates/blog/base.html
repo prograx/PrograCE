@@ -2,6 +2,7 @@
 <html>
     <head>
       <!-- CSS only -->
+<<<<<<< HEAD
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
         <!-- JS, Popper.js, and jQuery -->
@@ -11,10 +12,21 @@
         <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+=======
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+          <!-- JS, Popper.js, and jQuery -->
+          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+          <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+          <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+>>>>>>> a4624866c416a4a56c456157e9cb57115885e80b
         <title>Django Girls blog</title>
     </head>
     <body>
         <div class="page-header">
+<<<<<<< HEAD
           {% if user.is_authenticated %}
             <a href="{% url 'publicacion_borrador_lista' %}" class="top-menu"><span class="fa fa-edit"></span></a>
             <a href="{% url 'publicacion_nueva' %}" class="top-menu"><span class="fa fa-plus"></span></a>
@@ -28,4 +40,18 @@
         {% endblock %}
 
     </body>
+=======
+            <h1><a href="/">Django Girls Blog</a></h1>
+        </div>
+
+    <div class="content container">
+    <div class="row">
+        <div class="col-md-8">
+          {% block content %}
+          {% endblock %}
+        </div>
+    </div>
+</div>
+  </body>
+>>>>>>> a4624866c416a4a56c456157e9cb57115885e80b
 </html>

@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
+=======
+from django.shortcuts import render, get_object_or_404
+>>>>>>> a4624866c416a4a56c456157e9cb57115885e80b
 from django.utils import timezone
 from .models import Publicacion
 from .forms import PublicacionForm
@@ -10,6 +14,7 @@ def publicacion_lista(request):
                   fecha_publicacion__lte=timezone.now()).order_by('fecha_publicacion')
     return render(request, 'blog/publicacion_lista.html', {'publicaciones':publicaciones})
 
+<<<<<<< HEAD
 def publicacion_detalle(request, pk):
     publicacion = get_object_or_404(Publicacion, pk=pk)
     return render(request, 'blog/publicacion_detalle.html', {'publicacion': publicacion})
@@ -52,3 +57,8 @@ def publicacion_publicar(request, pk):
     publicacion = get_object_or_404(Publicacion, pk=pk)
     publicacion.publicar()
     return redirect('detalle_publicacion', pk=pk)
+=======
+def publicacion_detalle (request, pk):
+    publicacion = get_object_or_404(Publicacion, pk=pk)
+    return render(request, 'blog/publicacion_detalle.html',{'publicacion':publicacion})
+>>>>>>> a4624866c416a4a56c456157e9cb57115885e80b
